@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Day_7 {
 
     public static void main(String[] args) throws IOException {
-        List<Long> list = Arrays.stream(Files.readString(Paths.get("src/entries_d7.txt")).split(",")).map(Long::parseLong).collect(Collectors.toList());
+        List<Long> list = Arrays.stream(Files.readString(Paths.get("res/d7.txt")).split(",")).map(Long::parseLong).collect(Collectors.toList());
         long max = list.stream().max(Comparator.naturalOrder()).isPresent() ? list.stream().max(Comparator.naturalOrder()).get() : 0;
         long min = 1;
         while (Math.abs(min - max) > 1) {

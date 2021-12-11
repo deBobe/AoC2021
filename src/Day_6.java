@@ -10,7 +10,7 @@ import java.util.stream.LongStream;
 public class Day_6 {
 
     public static void main(String[] args) throws IOException {
-        List<Integer> list = Arrays.stream(Files.readString(Paths.get("src/entries_d6.txt")).split(",")).map(Integer::parseInt).collect(Collectors.toList());
+        List<Integer> list = Arrays.stream(Files.readString(Paths.get("res/d6.txt")).split(",")).map(Integer::parseInt).collect(Collectors.toList());
         long start = System.nanoTime();
         long sum = 0;
         long[] numbers = new long[9];

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class Day_9 {
 
     public static void main(String[] args) throws IOException {
-        List<List<Integer>> list = Files.readAllLines(Paths.get("src/entries_d9.txt")).stream().map(s -> Arrays.stream(s.split("")).map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList());
+        List<List<Integer>> list = Files.readAllLines(Paths.get("res/d9.txt")).stream().map(s -> Arrays.stream(s.split("")).map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList());
 
         //1. und 2.
         long sum = 0;

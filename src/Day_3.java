@@ -53,7 +53,7 @@ public class Day_3 {
         //shorter prettier second try
         //1.)
         StringBuilder str = new StringBuilder();
-        List<String> list = new ArrayList<>(Files.readAllLines(Paths.get("src/entries_d3.txt")));
+        List<String> list = new ArrayList<>(Files.readAllLines(Paths.get("res/d3.txt")));
         for (int i = 0; i < 12; i++) {
             int finalI = i;
             str.append(list.stream().reduce(0, (o, p) -> o += p.charAt(finalI) == '1' ? 1 : 0, Integer::sum) >= list.stream().reduce(0, (o, p) -> o += p.charAt(finalI) == '0' ? 1 : 0, Integer::sum) ? '1' : '0');

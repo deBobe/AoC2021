@@ -56,8 +56,8 @@ public class Day_4 {
 
 
     public static void main(String[] args) throws IOException {
-        List<Integer> draws = Arrays.stream(Files.readAllLines(Paths.get("src/entries_d4.txt")).get(0).split(",")).map(Integer::parseInt).collect(Collectors.toList());
-        List<List<Integer>> lines = Files.readAllLines(Paths.get("src/entries_d4.txt")).subList(1, Files.readAllLines(Paths.get("src/entries_d4.txt")).size()).stream().map(s -> s.equals("\n") ? new ArrayList<Integer>() : Arrays.stream(s.split("\s")).filter(f -> !f.equals("")).map(Integer::parseInt).collect(Collectors.toList())).filter(s -> !s.isEmpty()).collect(Collectors.toList());
+        List<Integer> draws = Arrays.stream(Files.readAllLines(Paths.get("res/d4.txt")).get(0).split(",")).map(Integer::parseInt).collect(Collectors.toList());
+        List<List<Integer>> lines = Files.readAllLines(Paths.get("res/d4.txt")).subList(1, Files.readAllLines(Paths.get("res/d4.txt")).size()).stream().map(s -> s.equals("\n") ? new ArrayList<Integer>() : Arrays.stream(s.split("\s")).filter(f -> !f.equals("")).map(Integer::parseInt).collect(Collectors.toList())).filter(s -> !s.isEmpty()).collect(Collectors.toList());
 
         ArrayList<Board> boards = new ArrayList<>();
         for (int i = 0; i < lines.size(); i+=5) {

@@ -11,12 +11,12 @@ public class Day_8 {
     public static void main(String[] args) throws IOException {
 
         //1.
-        int list = Files.readAllLines(Paths.get("src/entries_d8.txt")).stream().map(s -> Arrays.stream((s.split(Pattern.quote(" | "))[1].split(" "))).reduce(0, (x,e) -> x+= e.length() == 2  || e.length() == 4 || e.length() == 3 || e.length() == 7 ? 1:0,Integer::sum)).reduce(0,Integer::sum);
+        int list = Files.readAllLines(Paths.get("res/d8.txt")).stream().map(s -> Arrays.stream((s.split(Pattern.quote(" | "))[1].split(" "))).reduce(0, (x,e) -> x+= e.length() == 2  || e.length() == 4 || e.length() == 3 || e.length() == 7 ? 1:0,Integer::sum)).reduce(0,Integer::sum);
         System.out.println(list);
 
         //2.
-        List<String[]> right = Files.readAllLines(Paths.get("src/entries_d8.txt")).stream().map(s -> s.split(Pattern.quote(" | "))[1].split(" ")).collect(Collectors.toList());
-        List<String[]> left = Files.readAllLines(Paths.get("src/entries_d8.txt")).stream().map(s -> s.split(Pattern.quote(" | "))[0].split(" ")).collect(Collectors.toList());
+        List<String[]> right = Files.readAllLines(Paths.get("res/d8.txt")).stream().map(s -> s.split(Pattern.quote(" | "))[1].split(" ")).collect(Collectors.toList());
+        List<String[]> left = Files.readAllLines(Paths.get("res/d8.txt")).stream().map(s -> s.split(Pattern.quote(" | "))[0].split(" ")).collect(Collectors.toList());
 
         long sum = 0;
         for (int i = 0; i < right.size(); i++) {

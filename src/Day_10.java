@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Day_10 {
 
     public static void main(String[] args) throws IOException {
-        List<char[]> list = Files.readAllLines(Paths.get("src/entries_d10.txt")).stream().map(String::toCharArray).collect(Collectors.toList());
+        List<char[]> list = Files.readAllLines(Paths.get("res/d10.txt")).stream().map(String::toCharArray).collect(Collectors.toList());
 
         long sum = 0;
 

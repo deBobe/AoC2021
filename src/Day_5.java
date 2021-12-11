@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Day_5 {
 
     public static void main(String[] args) throws IOException {
-        List<List<Integer>> points = Files.readAllLines(Paths.get("src/entries_d5.txt")).stream().map(s-> Arrays.stream(s.split(",| -> ")).map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList());
+        List<List<Integer>> points = Files.readAllLines(Paths.get("res/d5.txt")).stream().map(s-> Arrays.stream(s.split(",| -> ")).map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList());
 
         int[][] grid = new int[1000][1000];
 
