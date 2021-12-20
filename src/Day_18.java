@@ -89,7 +89,7 @@ public class Day_18 {
         }
 
         while (finalNumber.contains("[")) {
-            finalNumber = finalNumber.replaceAll("(\\[)([0-9+*()]+)(,)([0-9+*()]+)(\\])", "($2+$2+$2+$4+$4)");
+            finalNumber = finalNumber.replaceAll("(\\[)([0-9+*()]+)(,)([0-9+*()]+)(])", "($2+$2+$2+$4+$4)");
         }
         int sum = 0;
         for (char c : finalNumber.toCharArray()) {
@@ -184,7 +184,7 @@ public class Day_18 {
         }
 
         while (newNumber.contains("[")) {
-            newNumber = newNumber.replaceAll("(\\[)([0-9+*()]+)(,)([0-9+*()]+)(\\])", "($2+$2+$2+$4+$4)");
+            newNumber = newNumber.replaceAll("(\\[)([0-9+*()]+)(,)([0-9+*()]+)(])", "($2+$2+$2+$4+$4)");
         }
         int sum = 0;
         for (char c : newNumber.toCharArray()) {
